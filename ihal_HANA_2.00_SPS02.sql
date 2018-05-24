@@ -1226,7 +1226,7 @@ SELECT 'BW','indexserver.ini','calcengine','disabled_patterns',' ','38','-- no r
 SELECT 'ALL','global.ini','threads','default_stack_size_kb',' ','2048','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,22.999,2,2,'2584287','indexserver_crash',' ' from DUMMY UNION ALL
 SELECT 'ALL','global.ini','threads','worker_stack_size_kb',' ','2048','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,22.999,2,2,'2584287','indexserver_crash',' ' from DUMMY UNION ALL
 SELECT 'ALL','global.ini','expensive_statement','internal',' ','-- no recommendation --','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,23.999,2,2,'2583885','indexserver_crash;trace',' ' from DUMMY UNION ALL
-SELECT 'ALL','indexserver.ini','calcengine','disabled_patterns',' ','43','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'2584492','JDBC;Composite_Provider;calc_engine',' ' from DUMMY UNION ALL
+SELECT 'BW','indexserver.ini','calcengine','disabled_patterns',' ','43','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'2584492','JDBC;Composite_Provider;calc_engine;OLAP_engine;BWoH',' ' from DUMMY UNION ALL
 SELECT 'ALL','nameserver.ini','session','max_number_of_sessions_per_partition',' ','2048','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'2516320','connection_limit;session',' ' from DUMMY UNION ALL
 SELECT 'ALL','indexserver.ini','execution','compilation_strategy',' ','always','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'2570371','Memory_leak;HEX',' ' from DUMMY UNION ALL
 SELECT 'ALL','indexserver.ini','execution','asynchronous_compilation',' ','false','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'2570371','Memory_leak;HEX',' ' from DUMMY UNION ALL
@@ -1292,7 +1292,7 @@ SELECT 'ALL','indexserver.ini','delta','use_massupdates',' ','false','-- no reco
 SELECT 'ALL','indexserver.ini','sql','esx_level',' ','0','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'2639068','ESX;indexserver_crash',' ' from DUMMY UNION ALL
 SELECT 'ALL','global.ini','performance_analyzer','plan_trace_enable',' ','false','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'2643064','indexserver_crash;trace;planviz',' ' from DUMMY UNION ALL
 SELECT 'ALL','global.ini','persistence','non_trans_cch_block_size',' ','134217728','-- no recommendation --','-- no recommendation --','-- no recommendation --',20,-1,2,2,'1999998','parameter;delta_merge',' ' from DUMMY UNION ALL
-    SELECT 'ALL',         'xsengine.ini',         'sql',                      'use_startup_timezone',                      ' ', 'false',                    '-- no recommendation --', '-- no recommendation --', '-- no recommendation --', 65,    68,  1,  1, '1932132', 'terminations',   ' ' FROM DUMMY 
+   SELECT 'ALL',         'xsengine.ini',         'sql',                      'use_startup_timezone',                      ' ', 'false',                    '-- no recommendation --', '-- no recommendation --', '-- no recommendation --', 65,    68,  1,  1, '1932132', 'terminations',   ' ' FROM DUMMY 
   ) P
 ),
 PARAMETER_SETTINGS AS
